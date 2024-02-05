@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+<div class="content">
+    <h2 class="form-title">Formulaire de Connexion</h2>
+    <form class="login-form" action="/auth/login" method="POST">
+        <label for="name" class="form-label">Nom:</label>
+        <input type="text" id="name" name="name" class="form-input" required><br><br>
+
+        <label for="password" class="form-label">Mot de passe:</label>
+        <input type="password" id="password" name="password" class="form-input" required><br><br>
+
+        <input type="submit" value="Se connecter" class="form-button">
+    </form>
+</div>
+
+<%- include('../partials/footer') %>

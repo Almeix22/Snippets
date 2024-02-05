@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+<div class="content">
+    <a href="/admin/new" class="float" style="text-decoration: none"> + </a>
+<% for(var i=0; i <= users.length-1; i++) { %>
+        <div class="card">
+            <div>Id : <%= users[i].id %></div>
+            <div>Name : <%= users[i].name %></div>
+            <div>Role : <%= users[i].role %></div>
+            <a href="/admin/edit/<%= users[i].id %>" class="button edit" style="text-decoration: none"> edit </a>
+            <a href="/admin/delete/<%= users[i].id %>" class="button delete" style="text-decoration: none"> delete </a>
+        </div>
+    <% } %>
+</div>
+<script src="/js/prism.js"></script>
+<%- include('../partials/footer') %>

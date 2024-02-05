@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+<div class="content">
+    
+    <% for(var i=0; i <= languages.length-1; i++) { %>
+        <a class="aCardLang" href="/<%=languages[i].id%>" ><div class="cardLang">
+            <i class="<%= languages[i].logo %>"></i>
+            <div class="title"><%= languages[i].name %></div>
+            <div><%= languages[i].snippets.length %> snippets</div>
+        </div>
+    </a>
+    <% } %>
+</div>
+<%- include('../partials/footer') %>

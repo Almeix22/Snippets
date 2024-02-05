@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+<h1><%= user ? "Modifier" : "Créer" %> un utilisateur</h1>
+<form class="snippet-form" method="POST">
+    <label for="name">Name :</label>
+    <input type="text" id="name" name="Name" value="<%= user ? user.name : "" %>" required><br><br>
+    <label for="role">Rôle :</label>
+    <select id="role" name="role" required>
+        <option value="1">USER</option>
+        <option value="2">ADMIN</option>
+    </select><br><br>
+
+    <input type="submit" value="<%= user ? "Modifier" : "Créer" %>">
+</form>
+
+<%- include('../partials/footer') %>

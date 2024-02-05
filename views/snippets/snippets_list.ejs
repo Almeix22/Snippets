@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<div class="content">
+    <a href="/new" class="float" style="text-decoration: none"> + </a>
+    <% for(var i=0; i <= snippets.length-1; i++) { %>
+        <div class="card">
+            <i class="<%= snippets[i].Language.logo %>"></i>
+            <div class="title"><%= snippets[i].title %></div>
+            <pre class="code"><code class="<%= snippets[i].Language.htmlClass %>"><%= snippets[i].code %></code></pre>
+            <div class="description"><%= snippets[i].description %></div>
+            <div class="date"><%= snippets[i].creationDate %></div>
+            <div class="author">Auteur : <%= snippets[i].author.name %></div>
+            <% if(user === snippets[i].author.name){ %>
+                <a href="/edit/<%= snippets[i].id %>" class="button edit" style="text-decoration: none"> edit </a>
+                <a href="/delete/<%= snippets[i].id %>" class="button delete" style="text-decoration: none"> delete </a>
+            <% } %>
+        </div>
+    <% } %>
+</div>
+<script src="/js/prism.js"></script>
+<%- include('../partials/footer') %>

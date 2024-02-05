@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> <%= titre %></title>
+    <link rel="stylesheet" href="/css/snippets.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <link rel="icon" type="image/x-icon" href="/images/user.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body>
+    <div class="header">
+        <p class="titleHeader">Snippets</p>
+        <div>
+            <a class="button" href="/">Accueil</a>
+            <a class="button" href="/languages">Languages</a>
+            <% if(locals.user){ %>
+                <a class="button" href="/auth/logout">Déconnexion</a>
+             <% } else{ %>
+                <a class="button" href="/auth">Connexion</a>
+              <% } %>
+            
+        </div>
+    </div>

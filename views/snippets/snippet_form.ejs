@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<h1><%= snippet ? "Modifier" : "Créer" %> un snippet</h1>
+<form class="snippet-form" method="POST">
+    <label for="title">Titre :</label>
+    <%console.log(snippet)%>
+    <input type="text" id="title" name="title" value="<%= snippet ? snippet.title : "" %>" required><br><br>
+
+    <label for="lang">Langage :</label>
+    <select id="lang" name="lang" required>
+        <option value="1">C</option>
+        <option value="2">HTML</option>
+    </select><br><br>
+
+    <label for="code">Code :</label>
+    <textarea id="code" name="code" required><%= snippet ? snippet.code : "" %></textarea><br><br>
+
+    <label for="description">Description :</label>
+    <textarea id="description" name="description"><%= snippet ? snippet.description : "" %></textarea><br><br>
+
+    <input type="submit" value="<%= snippet ? "Modifier" : "Créer" %>">
+</form>
+
+<%- include('../partials/footer') %>
